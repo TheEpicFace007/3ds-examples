@@ -96,19 +96,14 @@ int main (int argc_, char *argv_[]) {
 		// top screen
 		ImGui::SetNextWindowSize(ImVec2(width, height * 0.5f));
 		ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_FirstUseEver);
+		// Code for the top screen:
+		ImGui::ShowAboutWindow();
 
-			ImGui::Begin("Demo Window 1");
-			ImGui::Button("Hello!");
-			ImGui::End();
 
-		// bottom screen
 		ImGui::SetNextWindowSize(ImVec2(width * 0.8f, height * 0.5f));
 		ImGui::SetNextWindowPos(ImVec2(width * 0.1f, height * 0.5f), ImGuiCond_FirstUseEver);
-
-			ImGui::Begin("Demo Window 2");
-			ImGui::Button("Hello!");
-			ImGui::End();
-
+		// Code for the bottom screen:
+		ImGui::ShowDemoWindow();
 		// render frame
 		ImGui::Render();
 		C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
